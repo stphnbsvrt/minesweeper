@@ -34,12 +34,13 @@ include_directories(${TESTS_DIR})
 ####################################################
 set(MAIN_SRC_FILES ${SOURCE_DIR}/main.cpp)
 set(TEST_SRC_FILES ${TESTS_DIR}/mainTest.cpp)
+set(COMMON_SRC_FILES ${SOURCE_DIR}/minesweeper.cpp)
 
 ####################################################
 # Targets
 ####################################################
-add_executable(minesweeper ${MAIN_SRC_FILES})
-add_executable(unittest ${TEST_SRC_FILES})
+add_executable(minesweeper ${MAIN_SRC_FILES};${COMMON_SRC_FILES})
+add_executable(unittest ${TEST_SRC_FILES};${COMMON_SRC_FILES})
 
 ####################################################
 # Link libraries
